@@ -1,0 +1,585 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#200b35">
+<title>Untuk Okta Viati 💜</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --pink: #ffb5ee;
+  --purple: #c084fc;
+  --white: #fff7ff;
+  --bg: #160922;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg);
+  color: var(--white);
+  overflow-x: hidden;
+}
+
+button {
+  font-family: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#stars {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background:
+    radial-gradient(ellipse at top, #522071 0%, transparent 60%),
+    linear-gradient(160deg, #160922, #29103e, #13081f);
+}
+
+.star {
+  position: absolute;
+  color: #f8d5ff;
+  animation: twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle {
+  from { opacity: .2; }
+  to { opacity: 1; }
+}
+
+nav {
+  padding: 17px 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #180a25bb;
+  border-bottom: 1px solid #b86aff55;
+}
+
+.logo {
+  font-weight: 600;
+  color: var(--pink);
+}
+
+.nav-date {
+  font-size: 11px;
+  color: #e6c8ff;
+}
+
+.hero {
+  min-height: 88vh;
+  padding: 70px 22px 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+.badge {
+  display: inline-block;
+  border: 1px solid #e7a1ff88;
+  border-radius: 50px;
+  background: #a855f722;
+  padding: 9px 17px;
+  color: var(--pink);
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  margin-bottom: 23px;
+}
+
+h1, h2, .script {
+  font-family: 'Dancing Script', cursive;
+}
+
+h1 {
+  font-size: clamp(52px, 13vw, 85px);
+  line-height: 1.12;
+  text-shadow: 0 0 28px #c084fc77;
+}
+
+h1 span {
+  display: block;
+  color: var(--pink);
+}
+
+.subtitle {
+  margin: 23px auto;
+  max-width: 450px;
+  color: #e6d5f2;
+  line-height: 1.9;
+  font-size: 14px;
+}
+
+.portrait {
+  margin: 30px auto;
+  width: 155px;
+  height: 155px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 76px;
+  background: linear-gradient(135deg, #5c267d, #bb6ee8, #f5b7ec);
+  border: 3px solid #f5c7ff;
+  box-shadow: 0 0 35px #d879ff55;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.btn {
+  display: inline-block;
+  border: none;
+  border-radius: 50px;
+  padding: 14px 24px;
+  background: linear-gradient(135deg, #d879ff, #a855f7, #ec8ee5);
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+  box-shadow: 0 5px 25px #c084fc44;
+  transition: transform .2s;
+}
+
+.btn:active {
+  transform: scale(.96);
+}
+
+section {
+  padding: 65px 22px;
+}
+
+.section-inner {
+  max-width: 680px;
+  margin: auto;
+  text-align: center;
+}
+
+.eyebrow {
+  color: var(--pink);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: 10px;
+  margin-bottom: 13px;
+}
+
+h2 {
+  font-size: clamp(36px, 9vw, 52px);
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.card {
+  padding: 26px 23px;
+  background: linear-gradient(145deg, #ffffff0d, #b87aff12);
+  border: 1px solid #d9a4ff33;
+  border-radius: 22px;
+  box-shadow: 0 10px 35px #00000016;
+}
+
+.card p {
+  color: #eadbf5;
+  font-size: 14px;
+  line-height: 2;
+}
+
+.wishes {
+  display: grid;
+  gap: 15px;
+  margin-top: 24px;
+}
+
+.wish {
+  padding: 20px;
+  border-radius: 17px;
+  background: #ffffff09;
+  border: 1px solid #d9a4ff25;
+}
+
+.wish .emoji {
+  font-size: 30px;
+  margin-bottom: 9px;
+}
+
+.wish h3 {
+  color: var(--pink);
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+
+.wish p {
+  color: #ddcce9;
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+.cake {
+  font-size: 85px;
+  margin: 15px 0;
+  animation: float 3s ease-in-out infinite;
+}
+
+.cake-note {
+  font-size: 13px;
+  color: #e9d8f8;
+  line-height: 1.9;
+}
+
+.letter {
+  margin-top: 25px;
+  padding: 25px 20px;
+  text-align: left;
+  background: #fff7ff;
+  color: #522765;
+  border-radius: 19px;
+  line-height: 2;
+  font-size: 13px;
+  display: none;
+  animation: appear .6s ease;
+}
+
+.letter.show {
+  display: block;
+}
+
+.letter h3 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 35px;
+  margin-bottom: 12px;
+  color: #8d3eb0;
+  text-align: center;
+}
+
+.signature {
+  text-align: right;
+  margin-top: 18px;
+  font-family: 'Dancing Script', cursive;
+  font-size: 27px;
+  color: #9a48ba;
+}
+
+@keyframes appear {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+footer {
+  text-align: center;
+  padding: 35px 20px 45px;
+  color: #cbb0dd;
+  font-size: 11px;
+  line-height: 2;
+  border-top: 1px solid #ffffff12;
+}
+
+footer strong {
+  color: var(--pink);
+}
+
+.heart {
+  position: fixed;
+  bottom: -40px;
+  z-index: 5;
+  pointer-events: none;
+  animation: rise linear forwards;
+}
+
+@keyframes rise {
+  to {
+    transform: translateY(-115vh) rotate(35deg);
+    opacity: 0;
+  }
+}
+
+.hidden {
+  display: none !important;
+}
+
+@media (min-width: 600px) {
+  .wishes {
+    grid-template-columns: 1fr 1fr;
+  }
+  .hero {
+    min-height: 90vh;
+  }
+  section {
+    padding: 85px 30px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div id="stars"></div>
+
+<nav>
+  <div class="logo">💜 For My Special Person</div>
+  <div class="nav-date">15 OKTOBER ✨</div>
+</nav>
+
+<main>
+  <section class="hero">
+    <div class="hero-content">
+      <div class="badge">✦ A SPECIAL DAY FOR YOU ✦</div>
+
+      <h1>
+        Happy Birthday
+        <span>Okta Viati 💜</span>
+      </h1>
+
+      <p class="subtitle">
+        Hari ini bukan hari biasa, karena seseorang yang istimewa
+        sedang merayakan hari lahirnya. Seseorang yang ingin
+        selalu kulihat tersenyum. 🥹💗
+      </p>
+
+      <div class="portrait">🎀</div>
+
+      <p class="script" style="font-size:29px;color:#ffb5ee">
+        This little website is for you...
+      </p>
+
+      <br><br>
+
+      <button class="btn" onclick="goTo('ucapan')">
+        Buka Kejutanmu 💌
+      </button>
+    </div>
+  </section>
+
+  <section id="ucapan">
+    <div class="section-inner">
+      <div class="eyebrow">For You, Okta</div>
+      <h2>Selamat Ulang Tahun! 🎂</h2>
+
+      <div class="card">
+        <p>
+          Selamat bertambah usia, Okta Viati. 💜
+          Semoga di tanggal 15 Oktober ini, banyak hal baik
+          datang menghampirimu. Semoga setiap langkahmu
+          dipermudah, setiap harapanmu menemukan jalannya,
+          dan setiap harimu punya alasan untuk tersenyum.
+          <br><br>
+          Kamu pantas mendapatkan kebahagiaan, ketenangan,
+          dan kasih sayang yang tulus. Jangan lupa bahagia,
+          yaa, Okta. Hari ini adalah hari spesialmu! 🌷
+        </p>
+      </div>
+
+      <div class="wishes">
+        <div class="wish">
+          <div class="emoji">🌷</div>
+          <h3>Semoga Bahagia</h3>
+          <p>Semoga senyummu selalu punya alasan dan hatimu selalu menemukan ketenangan.</p>
+        </div>
+
+        <div class="wish">
+          <div class="emoji">✨</div>
+          <h3>Semua Impianmu</h3>
+          <p>Semoga satu per satu cita-citamu terwujud. Semangat terus mengejar masa depanmu!</p>
+        </div>
+
+        <div class="wish">
+          <div class="emoji">🫶</div>
+          <h3>Selalu Dikelilingi Sayang</h3>
+          <p>Semoga kamu dikelilingi orang-orang baik yang tulus menghargai dan menyayangimu.</p>
+        </div>
+
+        <div class="wish">
+          <div class="emoji">💜</div>
+          <h3>Tetap Jadi Dirimu</h3>
+          <p>Teruslah menjadi Okta yang istimewa dengan caramu sendiri. Kamu berharga!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="kue">
+    <div class="section-inner">
+      <div class="eyebrow">Make A Wish</div>
+      <h2>A Little Birthday Cake</h2>
+
+      <div class="cake">🎂</div>
+
+      <p class="cake-note">
+        Bayangkan lilin kecil di atas kue ini menyala untukmu.
+        Pejamkan mata sebentar, buat satu harapan,
+        dan semoga semesta membawamu lebih dekat dengannya. ✨
+      </p>
+
+      <br>
+
+      <button class="btn" onclick="celebrate()">
+        Kirim Doa Terbaik 💖
+      </button>
+
+      <p id="wishResult" style="margin-top:20px;color:#ffb5ee;font-size:14px"></p>
+    </div>
+  </section>
+
+  <section id="surat">
+    <div class="section-inner">
+      <div class="eyebrow">A Letter From Someone</div>
+      <h2>A Little Letter For You 💌</h2>
+
+      <p class="subtitle">
+        Ada sedikit kata yang ingin kusampaikan.
+        Tekan tombol di bawah ini, yaa.
+      </p>
+
+      <button class="btn" id="letterButton" onclick="openLetter()">
+        💌 Buka Surat dari HFZ
+      </button>
+
+      <div class="letter" id="loveLetter">
+        <h3>Untuk Okta tersayang 💜</h3>
+
+        Hai, Okta Viati...
+
+        <br><br>
+
+        Selamat ulang tahun, yaa. Hehe, akhirnya hari spesialmu
+        datang juga. Aku berharap kamu selalu sehat, bahagia,
+        dan diberi kemudahan dalam segala hal yang sedang
+        kamu perjuangkan.
+
+        <br><br>
+
+        Aku mungkin nggak selalu pandai menyusun kata-kata
+        yang indah. Tapi lewat halaman kecil ini, aku ingin
+        kamu tahu bahwa kehadiranmu punya arti tersendiri
+        buatku.
+
+        <br><br>
+
+        Terima kasih sudah menjadi dirimu sendiri.
+        Semoga di usia yang baru ini, kamu makin kuat,
+        makin percaya diri, dan semakin dekat dengan semua
+        impianmu.
+
+        <br><br>
+
+        Kalau suatu hari kamu merasa lelah, semoga kamu
+        selalu ingat bahwa kamu sudah berjalan sejauh ini.
+        Pelan-pelan saja, nggak harus semuanya sempurna.
+
+        <br><br>
+
+        Aku berharap bisa ikut melihat lebih banyak senyummu,
+        mendengar ceritamu, dan menjadi seseorang yang
+        membawa hal baik dalam hidupmu.
+
+        <br><br>
+
+        Sekali lagi, selamat ulang tahun, Okta.
+        Jangan pernah lupa bahwa kamu berharga.
+        Semoga hari ini menjadi awal dari banyak cerita
+        indah yang menunggumu. 💗
+
+        <div class="signature">
+          With love,<br>
+          HFZ 😉💜
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  Made with 💜 and a little bit of courage.<br>
+  Specially created for <strong>Okta Viati</strong>.<br>
+  <span style="color:#ffb5ee">15 Oktober · From HFZ, with love.</span>
+  <br><br>
+  © A Little Birthday Surprise ✨
+</footer>
+
+<script>
+const starContainer = document.getElementById('stars');
+
+for (let i = 0; i < 65; i++) {
+  const star = document.createElement('span');
+  star.className = 'star';
+  star.textContent = Math.random() > 0.5 ? '✦' : '·';
+  star.style.left = Math.random() * 100 + '%';
+  star.style.top = Math.random() * 100 + '%';
+  star.style.fontSize = (8 + Math.random() * 12) + 'px';
+  star.style.animationDelay = Math.random() * 3 + 's';
+  starContainer.appendChild(star);
+}
+
+function goTo(id) {
+  document.getElementById(id).scrollIntoView({
+    behavior: 'smooth'
+  });
+}
+
+function makeHeart() {
+  const heart = document.createElement('div');
+  heart.className = 'heart';
+
+  const symbols = ['💜', '💗', '💕', '✨', '💖'];
+  heart.textContent = symbols[
+    Math.floor(Math.random() * symbols.length)
+  ];
+
+  heart.style.left = Math.random() * 100 + 'vw';
+  heart.style.fontSize = (16 + Math.random() * 22) + 'px';
+  heart.style.animationDuration = (4 + Math.random() * 4) + 's';
+
+  document.body.appendChild(heart);
+
+  setTimeout(() => heart.remove(), 8500);
+}
+
+setInterval(makeHeart, 650);
+
+function celebrate() {
+  document.getElementById('wishResult').textContent =
+    'Aamiin! Semoga doa-doa baikmu menemukan jalannya, Okta. 💜✨';
+
+  for (let i = 0; i < 22; i++) {
+    setTimeout(makeHeart, i * 100);
+  }
+}
+
+function openLetter() {
+  const letter = document.getElementById('loveLetter');
+  const button = document.getElementById('letterButton');
+
+  letter.classList.toggle('show');
+
+  if (letter.classList.contains('show')) {
+    button.textContent = '💗 Tutup Surat';
+    setTimeout(() => {
+      letter.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center'
+      });
+    }, 100);
+  } else {
+    button.textContent = '💌 Buka Surat dari HFZ';
+  }
+}
+</script>
+
+</body>
+</html>
